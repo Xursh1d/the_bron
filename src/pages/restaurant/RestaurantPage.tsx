@@ -1,4 +1,5 @@
 import { DatePickerDemo } from "@/components/DatePickerDemo";
+import { TimePickerDemo } from "@/components/TimePickerDemo";
 import StarIcon from "@/components/icons/StarIcon";
 import { SelectDemo } from "@/components/SelectDemo";
 import { Button } from "@/components/ui/button";
@@ -48,6 +49,7 @@ export default function RestaurantPage() {
                     <SelectDemo title="Place" />
                     <div className="grid items-center grid-cols-2 gap-3">
                         <DatePickerDemo />
+                        <TimePickerDemo />
                     </div>
                     <Button className="w-full">Бронировать</Button>
                 </div>
