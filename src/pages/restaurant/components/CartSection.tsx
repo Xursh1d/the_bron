@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function CartSection() {
+    const navigate = useNavigate()
+
     return (
         <section className="space-y-10">
             <div className="h-[85px] flex justify-between items-start border-b border-[#CCCCCC]">
                 <h1 className="font-bold text-[48px]">Cart</h1>
-                <Button className="!h-[65px] px-10 !text-[32px]">125 000 UZS</Button>
+                <Button onClick={() => navigate("/confirm-pay")} className="!h-[65px] px-10 !text-[32px]">125 000 UZS</Button>
             </div>
             <div>
                 {Array(4).fill(true).map(_ => <div className="h-[160px] border-b border-[#CCCCCC] flex justify-between items-center">

@@ -19,7 +19,7 @@ export default function MenuSection() {
                         <div className="relative h-[280px] rounded-2xl bg-[#F1F1F1] flex items-center justify-center">
                             <div className="absolute sm:top-4 sm:right-4  top-1 right-1 bg-[#FFFFFFBF] p-2 rounded-md items-center gap-1 flex">
                                 <span className="text-[16px] font-bold leading-[21.82px]">4.1</span>
-                                <StarIcon />
+                                <StarIcon className="text-[#F7B406]" />
                             </div>
                             <img src="/images/menu_card.svg" className="w-[70%]" alt="" />
                         </div>

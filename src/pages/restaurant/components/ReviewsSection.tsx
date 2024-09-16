@@ -10,7 +10,7 @@ const ReviewsSection = () => {
                 {Array(5).fill(true).map((_, index) => <div className="flex items-center gap-2">
                     <div className="flex items-center space-x-1">
                         <span className="text-[16px] font-bold">{index + 1}</span>
-                        <StarIcon className="!size-4" />
+                        <StarIcon className="!size-4 text-[#F7B406]" />
                     </div>
                     <Progress value={76} className="w-full h-[9px]" />
                 </div>)}
@@ -25,7 +25,7 @@ const ReviewsSection = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-[2px]"><StarIcon className="size-5" /><StarIcon className="size-5" /><StarIcon className="size-5" /><StarIcon className="size-5" /><StarIcon className="size-5" /></div>
+                        <div className="flex items-center gap-[2px]"><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /></div>
                         <span className="text-lg font-bold">август 2023 г. </span>
                         <span className="text-[16px] text-[#A29F9F] font-bold">Срок аренды - Около недели</span>
                     </div>

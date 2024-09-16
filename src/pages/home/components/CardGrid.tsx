@@ -13,7 +13,7 @@ export const CardGrid = ({ title }: { title: string }) => {
                                 <div className="absolute sm:top-5 sm:right-5 top-1 right-1 bg-transparent sm:bg-[#FFFFFFBF] p-2 rounded-md">
                                     <div className="items-center hidden gap-1 sm:flex">
                                         <span className="text-[16px] font-bold leading-[21.82px]">4.1</span>
-                                        <StarIcon />
+                                        <StarIcon className="text-[#F7B406]" />
                                     </div>
                                     <img src="/images/heart.svg" alt="Heart" className="block text-white sm:hidden" />
                                 </div>

@@ -5,7 +5,7 @@ export const RestaurantHeader = () => (
     <div className="space-y-4">
         <h1 className="text-[40px] font-bold">Name Restarount</h1>
         <div className="flex items-center gap-4">
-            <StarIcon />
+            <StarIcon className="text-[#F7B406]" />
             <span className="text-2xl font-bold">4.1</span>
             <Link className="text-2xl font-bold underline text-primary" to="/">Tashkent</Link>
         </div>
