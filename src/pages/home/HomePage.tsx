@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CategoryButtons } from "./components/CategoryButtons";
+import { CategoryButtons } from "../../components/CategoryButtons";
 import { SearchBar } from "./components/SearchBar";
 import { CardGrid } from "./components/CardGrid";
 import { CarouselDemo } from "./components/CarouselDemo";

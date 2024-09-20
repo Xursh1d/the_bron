@@ -15,7 +15,7 @@ const ReviewsSection = () => {
                     <Progress value={76} className="w-full h-[9px]" />
                 </div>)}
             </div>
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid gap-5 md:grid-cols-2">
                 {Array(4).fill(true).map(_ => <div className="space-y-3">
                     <div className="flex items-center h-[72px] space-x-4">
                         <div className="size-[72px] rounded-full object-cover bg-[#D9D9D9]"></div>

@@ -7,8 +7,11 @@ import ChatIcon from "../icons/ChatIcon";
 import HeartIcon from "../icons/HeartIcon";
 import BookingIcon from "../icons/BookingIcon";
 import LogoutIcon from "../icons/LogoutIcon";
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
+    const navigate = useNavigate()
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -44,7 +47,7 @@ export default function Profile() {
                         <HeartIcon />
                         <span>избреные</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
+                    <DropdownMenuItem onClick={() => navigate("/my-reservation")} className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
                         <BookingIcon />
                         <span>мои бронирования</span>
                     </DropdownMenuItem>

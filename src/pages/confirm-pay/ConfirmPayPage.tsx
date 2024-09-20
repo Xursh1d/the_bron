@@ -15,8 +15,8 @@ export default function ConfirmPayPage() {
                 </Button>
                 <p className="text-2xl font-bold leading-9">Потвердите и оплатите</p>
             </div>
-            <div className="flex items-start min-h-[472px] justify-between gap-10">
-                <div className="w-[64.4%] space-y-5 h-full">
+            <div className="flex items-start flex-col md:flex-row min-h-[472px] justify-between gap-10">
+                <div className="w-full order-2 md:w-[64.4%] space-y-5 h-full">
                     <span className="text-2xl font-bold">Чем оплатить</span>
                     <RadioGroup defaultValue="option-one" className="space-y-4">
                         <div className="border-2 rounded-[10px] space-x-4 border-primary h-[84px] p-3 flex items-center">
@@ -37,7 +37,7 @@ export default function ConfirmPayPage() {
                         </div>
                     </RadioGroup>
                 </div>
-                <div className="w-[35.6%] border space-y-6 border-[#E0E0E0] min-h-[472px] p-5 rounded-[10px]">
+                <div className="w-full order-1 md:order-2 md:w-[35.6%] border space-y-6 border-[#E0E0E0] min-h-[472px] p-5 rounded-[10px]">
                     <div className="flex w-full gap-4">
                         <div className="size-[120px] bg-[#D9D9D9] rounded-2xl"></div>
                         <div className="space-y-2 w-[calc(100%-140px)]">
@@ -127,11 +127,11 @@ export default function ConfirmPayPage() {
                     <RadioGroupItem value="1" id="1" className="size-[30px] border-[#E0E0E0]" />
                 </div>
                 <div className="border border-[#C2C2C2] rounded-b-[10px] p-3 flex justify-between items-center">
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 w-[calc(100%-40px)]">
                         <span className="text-[20px] font-bold">Оплатите часть сейчас, а остаток внесите позже</span>
                         <span className="text-[20px] font-bold">000 000 сумм к оплате сегодня, 000 000сумм- 24 март.2024 г. Без дополнительных сборов.   Подробнее</span>
                     </div>
-                    <RadioGroupItem value="2" id="2" className="size-[30px] border-[#E0E0E0]" />
+                    <RadioGroupItem value="2" id="2" className="!size-[30px] border-[#E0E0E0]" />
                 </div>
             </RadioGroup>
             <div className="flex flex-col gap-[41px] py-10">

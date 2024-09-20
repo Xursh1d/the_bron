@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import * as React from "react";
-import { Label } from "./ui/label";
+import { Label } from "../../../components/ui/label";
 
 export function TimePickerDemo() {
     const [time, setTime] = React.useState<string>();
@@ -19,9 +19,8 @@ export function TimePickerDemo() {
             >
                 Время
             </Label>
-
             <Input
-                type={"time"}
+                type={"text"}
                 className={cn(
                     "peer w-full  justify-start text-left h-[56px] rounded-[10px] !text-[16px] font-normal pt-7",
                     !time && "text-muted-foreground"
