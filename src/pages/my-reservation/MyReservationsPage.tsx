@@ -8,8 +8,13 @@ export default function MyReservationsPage() {
             <TitleBar title="My Order" />
             <CategoryButtons />
             <div className="space-y-6">
-                <Reservation />
-                <Reservation />
+                <Reservation
+                    editCallback={() => null}
+                    deleteCallback={() => { }}
+                />
+                <Reservation
+                    feedbackCallback={() => { }}
+                />
             </div>
         </section>
     )

@@ -3,7 +3,7 @@ import SearchIcon from "@/components/icons/SearchIcon";
 
 export const SearchBar = () => {
     return (
-        <div className="flex justify-center w-full h-16 my-5 md:my-10 md:h-20">
+        <div className="justify-center hidden w-full h-16 my-5 sm:flex md:my-10 md:h-20">
             <div className="w-full md:w-[810px] h-full flex justify-between items-center border border-[#C2C2C2] rounded-[68px] p-2 shadow">
                 <input
                     type="text"

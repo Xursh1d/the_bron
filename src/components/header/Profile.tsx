@@ -1,21 +1,16 @@
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { DropdownMenuGroup } from "@/components/ui/dropdown-menu";
-import UserIcon from "../icons/UserIcon";
-import BellRing from "../icons/BellRing";
-import ChatIcon from "../icons/ChatIcon";
-import HeartIcon from "../icons/HeartIcon";
-import BookingIcon from "../icons/BookingIcon";
-import LogoutIcon from "../icons/LogoutIcon";
 import { useNavigate } from "react-router-dom";
+import { BellRing, Book, HeartIcon, LogOutIcon, MessageCircleMore, UserIcon } from "lucide-react";
 
 export default function Profile() {
     const navigate = useNavigate()
 
     return (
-        <DropdownMenu>
+        <DropdownMenu >
             <DropdownMenuTrigger asChild>
-                <div className="w-[86px] h-12 flex justify-between items-center cursor-pointer px-3 rounded-[99px] bg-[#EAF1FF]">
+                <div className="w-[86px] hidden sm:flex h-12 justify-between items-center cursor-pointer px-3 rounded-[99px] bg-[#EAF1FF]">
                     <img className="size-4" src="/images/menu.svg" alt="Menu" />
                     <div className="relative">
                         <Avatar className="size-8">
@@ -30,30 +25,30 @@ export default function Profile() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[256px] rounded-2xl px-4 -right-10 top-3 absolute">
                 <DropdownMenuLabel className="text-[18px] flex items-center gap-5 font-[700]">
-                    <UserIcon />
+                    <UserIcon strokeWidth={2} color="#000000" />
                     <span>Account</span>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
-                    <DropdownMenuItem className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
-                        <BellRing />
+                    <DropdownMenuItem onClick={() => navigate("/notifications")} className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
+                        <BellRing strokeWidth={1.5} />
                         <span>уведомление</span>
                     </DropdownMenuItem>
                     <DropdownMenuItem className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
-                        <ChatIcon />
+                        <MessageCircleMore strokeWidth={1.5} />
                         <span>сообщение</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
-                        <HeartIcon />
+                    <DropdownMenuItem onClick={() => navigate("/likes")} className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
+                        <HeartIcon strokeWidth={1.5} />
                         <span>избреные</span>
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => navigate("/my-reservation")} className="text-[18px] font-[400] cursor-pointer flex gap-5 items-center">
-                        <BookingIcon />
+                        <Book strokeWidth={1.5} />
                         <span>мои бронирования</span>
                     </DropdownMenuItem>
                 </DropdownMenuGroup>
-                <DropdownMenuItem className="text-[18px] font-[400] cursor-pointer text-[#E32934]  flex gap-5 items-center">
-                    <LogoutIcon />
+                <DropdownMenuItem className="text-[18px] px-2.5 font-[400] cursor-pointer text-[#E32934]  flex gap-5 items-center">
+                    <LogOutIcon strokeWidth={1.5} />
                     <span>выход</span>
                 </DropdownMenuItem>
             </DropdownMenuContent>

@@ -1,12 +1,16 @@
 import { Navigate, RouteObject } from "react-router-dom";
 import ConfirmPayPage from "./pages/confirm-pay";
 import HomePage from "./pages/home";
+import LikesPage from "./pages/likes";
 import MyReservationsPage from "./pages/my-reservation";
+import EditBookingPage from "./pages/my-reservation/edit-booking";
 import { CancelBooking } from "./pages/my-reservation/modals/CancelBooking";
 import LeaveFeedback from "./pages/my-reservation/modals/LeaveFeedback";
 import SuccessCancel from "./pages/my-reservation/modals/SuccessModal";
-import PageLayout from "./pages/PageLayout";
+import NotificationsPage from "./pages/notifications";
 import RestaurantPage from "./pages/restaurant";
+import PageLayout from "./pages/PageLayout";
+import ProtectedRoute from "./ProtectedRoute";
 
 export const routes: RouteObject[] = [
   {
@@ -31,22 +35,53 @@ export const routes: RouteObject[] = [
       },
       {
         path: "/my-reservation",
-        element: <MyReservationsPage />,
+        element: <ProtectedRoute />,
         children: [
           {
-            path: "/my-reservation/cancel",
-            element: <CancelBooking />
+            path: "/my-reservation",
+            element: <MyReservationsPage />,
+            children: [
+              {
+                path: "cancel",
+                element: <CancelBooking />,
+              },
+              {
+                path: "cancel/success",
+                element: <SuccessCancel />,
+              },
+              {
+                path: "feedback",
+                element: <LeaveFeedback />,
+              },
+              {
+                path: "edit",
+                element: <EditBookingPage />,
+              },
+            ]
           },
+        ],
+      },
+      {
+        path: "/likes",
+        element: <ProtectedRoute />,  // Protect Likes Page
+        children: [
           {
-            path: "/my-reservation/cancel/success",
-            element: <SuccessCancel />
+            path: "/likes/",
+            element: <LikesPage />,
           },
+        ],
+      },
+      {
+        path: "/notifications",
+        element: <ProtectedRoute />,  // Protect Notifications Page
+        children: [
           {
-            path: "/my-reservation/feedback",
-            element: <LeaveFeedback />
-          }
-        ]
-      }
+            path: "/notifications/",
+            element: <NotificationsPage />,
+          },
+        ],
+      },
     ],
   },
+
 ];

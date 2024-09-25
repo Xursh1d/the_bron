@@ -1,14 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { CategoryButtons } from "../../components/CategoryButtons";
-import { SearchBar } from "./components/SearchBar";
-import { CarouselDemo } from "./components/CarouselDemo";
-import FilterIcon from "@/components/icons/FilterIcon";
+import { CategoryButtons } from "@/components/CategoryButtons";
+import TitleBar from "@/components/TitleBar";
 import { useState } from "react";
 import CardGrid from "../../components/CardGrid";
-import { SlidersHorizontal } from "lucide-react";
-import SearchDemo from "@/components/SearchDemo";
 
-export default function HomePage() {
+export default function LikesPage() {
     const [items] = useState([
         {
             id: 1,
@@ -49,29 +44,14 @@ export default function HomePage() {
     ]);
 
     return (
-        <section className="space-y-4">
-            <div className="grid sm:hidden my-2 grid-cols-6 items-center h-[50px] gap-3">
-                <SearchDemo containerClassName="col-span-5" className="w-full !rounded-[8px] h-full" placeholder="Search..." />
-                <Button variant={"outline"} size="icon" className="col-span-1 h-full bg-white !w-auto">
-                    <SlidersHorizontal className="text-primary" />
-                </Button>
-            </div>
-            <CarouselDemo />
-            <div className="flex items-center justify-between gap-4 my-5 md:my-10">
-                <CategoryButtons />
-                <Button className="w-[129px] md:flex hidden !h-12" variant={"outline"} size="md">
-                    Фильтр
-                    <FilterIcon />
-                </Button>
-            </div>
-            <SearchBar />
+        <section className="space-y-10">
+            <TitleBar title="Избрение" />
+            <CategoryButtons />
             <div className="flex flex-col items-center gap-10">
                 <CardGrid items={items} title="Дачные дома" />
                 <CardGrid items={items} title="Санатори" />
                 <CardGrid items={items} title="Чайханы" />
-                <Button className="sm:w-[250px] mb-0 md:mb-10">Показать больше</Button>
-                <CardGrid items={items} title="Акции" />
             </div>
         </section>
-    );
+    )
 }
