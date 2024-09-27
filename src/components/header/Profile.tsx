@@ -3,9 +3,11 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { DropdownMenuGroup } from "@/components/ui/dropdown-menu";
 import { useNavigate } from "react-router-dom";
 import { BellRing, Book, HeartIcon, LogOutIcon, MessageCircleMore, UserIcon } from "lucide-react";
+import { useAuth } from "@/pages/auth/AuthProvider";
 
 export default function Profile() {
     const navigate = useNavigate()
+    const { setShowModal } = useAuth()
 
     return (
         <DropdownMenu >
@@ -24,7 +26,7 @@ export default function Profile() {
                 </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[256px] rounded-2xl px-4 -right-10 top-3 absolute">
-                <DropdownMenuLabel className="text-[18px] flex items-center gap-5 font-[700]">
+                <DropdownMenuLabel onClick={() => setShowModal(true)} className="text-[18px] flex items-center gap-5 font-[700]">
                     <UserIcon strokeWidth={2} color="#000000" />
                     <span>Account</span>
                 </DropdownMenuLabel>
