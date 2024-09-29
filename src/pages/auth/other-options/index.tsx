@@ -1,8 +1,11 @@
 import ModalContainer from "@/components/ModalContainer";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useAuth } from "../AuthProvider";
 
 export default function OtherOptions() {
+    const { setShowModal } = useAuth()
+
     return (
         <ModalContainer backCallBack={() => { }} title="" className="!max-w-[532px]" childClass="!pt-0 space-y-10">
             <div className="space-y-3">
@@ -60,7 +63,7 @@ export default function OtherOptions() {
                     </div>
                 </div>
             </RadioGroup>
-            <Button className="!h-12 w-full !text-lg">Отправить код ещё раз</Button>
+            <Button onClick={() => setShowModal("complete")} className="!h-12 w-full !text-lg">Отправить код ещё раз</Button>
         </ModalContainer>
     )
 }

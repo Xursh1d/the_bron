@@ -2,7 +2,6 @@ import ReservationHeader from './ReservationHeader';
 import ReservationDetails from './ReservationDetails';
 import ReservationTimes from './ReservationTimes';
 import ReservationActions from './ReservationActions';
-import { Outlet } from 'react-router-dom';
 
 type IReservationProps = {
     status?: 'active' | 'cancel' | 'confirm' | 'pending'
@@ -24,7 +23,6 @@ export default function Reservation(props: IReservationProps) {
                 deleteCallback={deleteCallback}
                 feedbackCallback={feedbackCallback}
             />
-            <Outlet />
         </div>
     );
 }

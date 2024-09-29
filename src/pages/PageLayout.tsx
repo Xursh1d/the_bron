@@ -5,7 +5,7 @@ import AuthModal from "./auth";
 import { useAuth } from "./auth/AuthProvider";
 
 export default function PageLayout() {
-    const { setShowModal, showModal } = useAuth()
+    const { showModal } = useAuth()
 
     return (
         <section className="w-full h-screen">
@@ -13,7 +13,7 @@ export default function PageLayout() {
             <main className="container mx-auto mb-5 md:mb-10">
                 <Outlet />
             </main>
-            <AuthModal isOpen={showModal} onClose={() => setShowModal(false)} />
+            <AuthModal isOpen={showModal} />
             <Footer />
         </section>
     );

@@ -3,8 +3,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { DialogDescription } from "@radix-ui/react-dialog";
+import { useAuth } from "../AuthProvider";
 
 export default function RegisterModal() {
+    const { setShowModal } = useAuth()
 
     return (
         <Dialog open onOpenChange={() => { }}>
@@ -22,7 +24,7 @@ export default function RegisterModal() {
                     </div>
                     <p className="text-sm">Мы позвоним вам или отправим SMS, чтобы подтвердить номер телефона. Применяются стандартные условия вашего тарифа на прием сообщений и передачу данных.  Политика конфиденциальности</p>
                 </div>
-                <Button className="w-full !text-lg !h-12">Продолжить</Button>
+                <Button onClick={() => setShowModal("otp")} className="w-full !text-lg !h-12">Продолжить</Button>
                 <div className="grid items-center grid-cols-7">
                     <span className="col-span-3 block h-[1px] bg-[#E0E0E0]"></span>
                     <p className="block col-span-1 text-center">или</p>

@@ -1,4 +1,5 @@
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { useAuth } from "@/pages/auth/AuthProvider";
 import { BellRing, Book, HeartIcon, LogOutIcon, MessageCircleMore, UserIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
@@ -6,6 +7,7 @@ import { Command, CommandGroup, CommandItem, CommandList } from "../ui/command";
 
 export function SheetDemo() {
     const navigate = useNavigate()
+    const { setShowModal } = useAuth()
 
     return (
         <Sheet>
@@ -31,7 +33,7 @@ export function SheetDemo() {
                 <div className="grid gap-4 relative h-[calc(100%-48px)] ">
                     <Command>
                         <CommandList>
-                            <div className="px-3 border-b border-[#D9D9D9] pb-3 text-[18px] flex items-center gap-5 font-[700]">
+                            <div onClick={() => setShowModal("register")} className="px-3 border-b border-[#D9D9D9] pb-3 text-[18px] flex items-center gap-5 font-[700]">
                                 <UserIcon strokeWidth={2} color="#000000" />
                                 <span>Account</span>
                             </div>

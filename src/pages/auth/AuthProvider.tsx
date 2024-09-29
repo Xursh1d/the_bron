@@ -1,8 +1,9 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 
+export type ShowModalType = "register" | "otp" | "options" | "finish" | "password" | "recover" | "complete" | null;
 interface AuthContextType {
-    showModal: boolean;
-    setShowModal: (value: boolean) => void;
+    showModal: ShowModalType
+    setShowModal: (value: ShowModalType) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -16,7 +17,7 @@ export const useAuth = (): AuthContextType => {
 };
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [showModal, setShowModal] = useState<boolean>(false);
+    const [showModal, setShowModal] = useState<ShowModalType>(null);
 
     return (
         <AuthContext.Provider value={{ showModal, setShowModal }}>

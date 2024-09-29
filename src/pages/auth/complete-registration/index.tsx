@@ -3,8 +3,10 @@ import { DatePickerDemo } from "@/components/DatePickerDemo";
 import { InputDemo } from "@/components/InputDemo";
 import ModalContainer from "@/components/ModalContainer";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "../AuthProvider";
 
 export default function CompleteRegistration() {
+    const { setShowModal } = useAuth()
     return (
         <ModalContainer childClass="!p-0" isHeading={false}>
             <div className="px-8 space-y-5 py-7">
@@ -21,7 +23,7 @@ export default function CompleteRegistration() {
                     <InputDemo placeholder="Повторите пароль" type={"password"} error="Проверьте соответствие пароля" />
                     <CheckboxDemo label="Я ознакомился с пользовательским соглашением" />
                 </div>
-                <Button className="!h-12 w-full !text-lg">Продолжить</Button>
+                <Button onClick={() => setShowModal("password")} className="!h-12 w-full !text-lg">Продолжить</Button>
             </div>
         </ModalContainer>
     )

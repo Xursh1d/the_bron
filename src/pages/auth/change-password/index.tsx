@@ -1,8 +1,10 @@
 import { InputDemo } from "@/components/InputDemo";
 import ModalContainer from "@/components/ModalContainer";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "../AuthProvider";
 
 export default function ChangePassword() {
+    const { setShowModal } = useAuth()
     return (
         <ModalContainer backCallBack={() => { }} title="" className="!max-w-[532px]" childClass="!pt-0 space-y-10">
             <div className="space-y-3">
@@ -14,7 +16,7 @@ export default function ChangePassword() {
                 <p className="text-[#A29F9F] text-sm">При создании пароля должны использоваться большие и маленькие буквы (A-Z, a-z), а также цифры (0-9)</p>
                 <InputDemo type={"password"} placeholder="Повторите пароль" />
             </div>
-            <Button className="!h-12 w-full !text-lg">Восстановление пароля</Button>
+            <Button onClick={() => setShowModal("finish")} className="!h-12 w-full !text-lg">Восстановление пароля</Button>
         </ModalContainer>
     )
 }

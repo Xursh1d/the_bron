@@ -1,8 +1,11 @@
 import ModalContainer from "@/components/ModalContainer";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "../AuthProvider";
 import { InputOTPPattern } from "./components/InputOTPPattern";
 
 export default function EnterCode() {
+    const { setShowModal } = useAuth()
+
     return (
         <ModalContainer backCallBack={() => { }} title="" className="!max-w-[532px]" childClass="!pt-0 space-y-10">
             <div className="space-y-3">
@@ -13,8 +16,8 @@ export default function EnterCode() {
                 <InputOTPPattern />
             </div>
             <p className="text-[16px] text-[#7A7A7A] text-center">Если код не придет, то можно получить новый через 51 сек</p>
-            <Button className="!h-12 w-full !text-lg">Продолжить</Button>
-            <Button className="!h-12 w-full !text-lg underline text-[#0A0A0A]" variant={"link"}>Другие варианты</Button>
+            <Button onClick={() => setShowModal("complete")} className="!h-12 w-full !text-lg">Продолжить</Button>
+            <Button onClick={() => setShowModal("options")} className="!h-12 w-full !text-lg underline text-[#0A0A0A]" variant={"link"}>Другие варианты</Button>
         </ModalContainer>
     )
 }

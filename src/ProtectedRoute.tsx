@@ -12,7 +12,7 @@ const ProtectedRoute = () => {
 
     useEffect(() => {
         if (!isAuth) {
-            setShowModal(true);
+            setShowModal("register");
         }
     }, [isAuth, setShowModal]);
 

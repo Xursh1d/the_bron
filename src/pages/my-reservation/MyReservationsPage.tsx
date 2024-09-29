@@ -1,5 +1,6 @@
 import { CategoryButtons } from "@/components/CategoryButtons";
 import TitleBar from "@/components/TitleBar";
+import { Outlet } from "react-router-dom";
 import Reservation from "./components/Reservation";
 
 export default function MyReservationsPage() {
@@ -16,6 +17,8 @@ export default function MyReservationsPage() {
                     feedbackCallback={() => { }}
                 />
             </div>
+            <Outlet />
+
         </section>
     )
 }

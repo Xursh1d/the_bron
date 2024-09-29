@@ -1,8 +1,10 @@
 import { InputDemo } from "@/components/InputDemo";
 import ModalContainer from "@/components/ModalContainer";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "../AuthProvider";
 
 export default function Password() {
+    const { setShowModal } = useAuth()
     return (
         <ModalContainer backCallBack={() => { }} title="" className="!max-w-[532px]" childClass="!pt-0 space-y-10">
             <div className="space-y-3">
@@ -13,7 +15,7 @@ export default function Password() {
                 <InputDemo type={"password"} placeholder="Пароль" />
                 <p className="text-end text-primary text-[16px]">Забыли пароль?</p>
             </div>
-            <Button className="!h-12 w-full !text-lg">Проверка</Button>
+            <Button onClick={() => setShowModal("recover")} className="!h-12 w-full !text-lg">Проверка</Button>
         </ModalContainer>
     )
 }

@@ -26,7 +26,7 @@ export default function Profile() {
                 </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[256px] rounded-2xl px-4 -right-10 top-3 absolute">
-                <DropdownMenuLabel onClick={() => setShowModal(true)} className="text-[18px] flex items-center gap-5 font-[700]">
+                <DropdownMenuLabel onClick={() => setShowModal("register")} className="text-[18px] flex items-center gap-5 font-[700]">
                     <UserIcon strokeWidth={2} color="#000000" />
                     <span>Account</span>
                 </DropdownMenuLabel>

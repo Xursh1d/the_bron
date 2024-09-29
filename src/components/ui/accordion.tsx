@@ -20,6 +20,8 @@ AccordionItem.displayName = "AccordionItem"
 
 interface AccordionTriggerProps extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> {
   icon?: React.ReactNode; // Accept icon as a prop
+  className?: string,
+  children: React.ReactNode,
 }
 
 const AccordionTrigger = React.forwardRef<
