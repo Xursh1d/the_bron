@@ -9,7 +9,7 @@ export default function RegisterModal() {
     const { setShowModal } = useAuth()
 
     return (
-        <Dialog open onOpenChange={() => { }}>
+        <Dialog open onOpenChange={() => setShowModal(null)}>
             <DialogContent className={cn("sm:max-w-[530px] overflow-auto max-h-screen px-6 py-7 !rounded-[20px]")}>
                 <DialogHeader>
                     <div className="min-h-10 w-full !relative !flex flex-col items-center gap-3">
