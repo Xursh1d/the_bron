@@ -3,74 +3,74 @@ import { Button } from '@/components/ui/button';
 const AboutSection = () => {
     return (
         <>
-            <section className="max-w-[810px] space-y-10">
-                <div className="h-[150px] border-y border-[#EDEDED] flex items-center">
+            <section className="max-w-[810px] space-y-5 sm:space-y-10">
+                <div className="h-[150px] border-y border-[#EDEDED] hidden sm:flex items-center">
                     <div className="flex h-[60px] space-x-4">
                         <div className="size-[60px] rounded-full object-cover bg-[#D9D9D9]"></div>
                         <div className="flex flex-col justify-center">
-                            <h6 className="text-lg font-bold">Name of Restoraunt</h6>
+                            <h6 className="text-sm font-bold sm:text-lg">Name of Restoraunt</h6>
                             <span className="text-[16px]">Adress</span>
                         </div>
                     </div>
                 </div>
                 <div className="space-y-4 ">
                     <div className="flex items-center gap-4">
-                        <img src="/images/wifi.svg" alt="" />
-                        <span className="text-lg font-bold">Быстрый Wi-Fi </span>
+                        <img className='w-5 sm:w-auto' src="/images/wifi.svg" alt="" />
+                        <span className="text-sm font-bold sm:text-lg">Быстрый Wi-Fi </span>
                     </div>
                     <div className="flex items-center gap-4">
-                        <img src="/images/CalendarBlank.svg" alt="" />
-                        <span className="text-lg font-bold">Беспоатная отмена в течение до 1 часа прибытия </span>
+                        <img className='w-5 sm:w-auto' src="/images/CalendarBlank.svg" alt="" />
+                        <span className="text-sm font-bold sm:text-lg">Беспоатная отмена в течение до 1 часа прибытия </span>
                     </div>
                     <div className="flex items-center gap-4">
-                        <img src="/images/door.svg" alt="" />
-                        <span className="text-lg font-bold">Самостоятельное прибытие </span>
+                        <img className='w-5 sm:w-auto' src="/images/door.svg" alt="" />
+                        <span className="text-sm font-bold sm:text-lg">Самостоятельное прибытие </span>
                     </div>
                 </div>
-                <div className="space-y-2">
-                    <p className="overflow-hidden text-lg text-black line-clamp-5 text-ellipsis">
+                <div className="sm:space-y-2">
+                    <p className="overflow-hidden text-[16px] sm:text-lg text-black line-clamp-5 text-ellipsis">
                         Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
                         mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.Yorem ipsum dolor sit amet,
                         consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
                     </p>
-                    <Button className="!p-0 !text-black font-bold underline !text-lg" variant={"link"}>
+                    <Button className="!p-0 !text-black font-bold underline text-sm sm:!text-lg" variant={"link"}>
                         Показать ещё
-                        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className='size-4 sm:size-6' width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.9251 10.4425L9.87424 16.6925C9.80873 16.7506 9.73096 16.7967 9.64537 16.8281C9.55978 16.8595 9.46804 16.8757 9.3754 16.8757C9.28275 16.8757 9.19102 16.8595 9.10542 16.8281C9.01983 16.7967 8.94206 16.7506 8.87655 16.6925C8.81104 16.6345 8.75908 16.5655 8.72362 16.4897C8.68817 16.4138 8.66992 16.3325 8.66992 16.2503C8.66992 16.1682 8.68817 16.0869 8.72362 16.011C8.75908 15.9352 8.81104 15.8662 8.87655 15.8082L15.4294 10.0003L8.87655 4.19253C8.74425 4.07526 8.66992 3.9162 8.66992 3.75035C8.66992 3.5845 8.74425 3.42544 8.87655 3.30816C9.00885 3.19088 9.18829 3.125 9.3754 3.125C9.5625 3.125 9.74194 3.19088 9.87424 3.30816L16.9251 9.55816C16.9906 9.61621 17.0426 9.68514 17.0781 9.76101C17.1136 9.83688 17.1319 9.91821 17.1319 10.0003C17.1319 10.0825 17.1136 10.1638 17.0781 10.2397C17.0426 10.3156 16.9906 10.3845 16.9251 10.4425Z" fill="#343330" />
                         </svg>
                     </Button>
                 </div>
             </section>
-            <section className="grid h-[176px] grid-cols-5 my-10">
-                <div className="border-r flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
+            <section className="grid gap-6 md:gap-0 ms:h-[176px] grid-cols-2  md:grid-cols-5 my-5 sm:my-10">
+                <div className="md:border-r bg-[#F5F5F4] rounded-lg flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
                     <span className="text-sm font-bold md:text-lg">Чистота</span>
-                    <span className="text-lg font-bold">4.2</span>
+                    <span className="text-sm font-bold sm:text-lg">4.2</span>
                     <svg width="22" height="32" viewBox="0 0 22 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.66602 10C9.66602 8.58551 10.2279 7.22896 11.2281 6.22876C12.2283 5.22857 13.5849 4.66667 14.9993 4.66667H16.3327V0.666667H1.66602V4.66667C2.37326 4.66667 3.05154 4.94762 3.55163 5.44772C4.05173 5.94781 4.33268 6.62609 4.33268 7.33333V15.3333C4.33268 16.0406 4.05173 16.7189 3.55163 17.219C3.05154 17.7191 2.37326 18 1.66602 18V31.3333H16.3327V22L16.1393 21.884C11.666 18.6667 9.66602 15.3333 9.66602 10ZM9.66602 10H4.33268M13.666 4.83467V6.66667C13.666 7.55072 14.0172 8.39857 14.6423 9.02369C15.2674 9.64881 16.1153 10 16.9993 10M20.3327 0V5.33333" stroke="black" stroke-width="1.5" />
                     </svg>
                 </div>
-                <div className="border-r flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
+                <div className="md:border-r bg-[#F5F5F4] rounded-lg flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
                     <span className="text-sm font-bold md:text-lg">Местоположение</span>
-                    <span className="text-lg font-bold">4.2</span>
+                    <span className="text-sm font-bold sm:text-lg">4.2</span>
                     <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M25.865 2.21139C25.7452 2.11805 25.6057 2.05322 25.4572 2.02182C25.3086 1.99041 25.1548 1.99326 25.0075 2.03014L17.3662 3.94014L9.6975 0.105139C9.48383 -0.00143594 9.23908 -0.0280392 9.0075 0.0301396L1.0075 2.03014C0.791161 2.08422 0.599103 2.20905 0.461853 2.3848C0.324602 2.56056 0.250034 2.77714 0.25 3.00014V21.0001C0.250023 21.1521 0.284674 21.302 0.351321 21.4386C0.417968 21.5752 0.514859 21.6947 0.634633 21.7882C0.754408 21.8817 0.893916 21.9467 1.04256 21.9782C1.19121 22.0098 1.34508 22.007 1.4925 21.9701L9.13375 20.0601L16.8025 23.8951C16.9417 23.9638 17.0948 23.9997 17.25 24.0001C17.3318 24.0001 17.4132 23.99 17.4925 23.9701L25.4925 21.9701C25.7088 21.9161 25.9009 21.7912 26.0381 21.6155C26.1754 21.4397 26.25 21.2231 26.25 21.0001V3.00014C26.25 2.84805 26.2154 2.69795 26.1487 2.56127C26.0819 2.42459 25.9849 2.30493 25.865 2.21139ZM10.25 2.61764L16.25 5.61764V21.3826L10.25 18.3826V2.61764ZM2.25 3.78139L8.25 2.28139V18.2189L2.25 19.7189V3.78139ZM24.25 20.2189L18.25 21.7189V5.78139L24.25 4.28139V20.2189Z" fill="#343330" />
                     </svg>
                 </div>
-                <div className="border-r flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
+                <div className="md:border-r bg-[#F5F5F4] rounded-lg flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
                     <span className="text-sm font-bold md:text-lg">Еда</span>
-                    <span className="text-lg font-bold">4.7</span>
+                    <span className="text-sm font-bold sm:text-lg">4.7</span>
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.50001 7.99962V1.99962C5.50001 1.73441 5.60537 1.48005 5.7929 1.29252C5.98044 1.10498 6.23479 0.999623 6.50001 0.999623C6.76523 0.999623 7.01958 1.10498 7.20712 1.29252C7.39465 1.48005 7.50001 1.73441 7.50001 1.99962V7.99962C7.50001 8.26484 7.39465 8.51919 7.20712 8.70673C7.01958 8.89427 6.76523 8.99962 6.50001 8.99962C6.23479 8.99962 5.98044 8.89427 5.7929 8.70673C5.60537 8.51919 5.50001 8.26484 5.50001 7.99962ZM23.5 1.99962V24.9996C23.5 25.2648 23.3947 25.5192 23.2071 25.7067C23.0196 25.8943 22.7652 25.9996 22.5 25.9996C22.2348 25.9996 21.9804 25.8943 21.7929 25.7067C21.6054 25.5192 21.5 25.2648 21.5 24.9996V18.9996H15.5C15.2348 18.9996 14.9804 18.8943 14.7929 18.7067C14.6054 18.5192 14.5 18.2648 14.5 17.9996C14.5464 15.6042 14.849 13.2207 15.4025 10.8896C16.625 5.82837 18.9425 2.43587 22.1063 1.08087C22.2583 1.01574 22.4242 0.989341 22.5889 1.00405C22.7537 1.01877 22.9123 1.07412 23.0504 1.16517C23.1885 1.25622 23.3019 1.38011 23.3803 1.52574C23.4588 1.67137 23.4999 1.8342 23.5 1.99962ZM21.5 3.73712C17.4788 6.80837 16.6913 14.2896 16.5375 16.9996H21.5V3.73712ZM11.4863 1.83587C11.4667 1.70457 11.4211 1.57847 11.3523 1.46495C11.2835 1.35143 11.1927 1.25274 11.0854 1.17466C10.978 1.09657 10.8562 1.04065 10.727 1.01015C10.5977 0.979647 10.4638 0.975179 10.3328 0.997005C10.2018 1.01883 10.0766 1.06651 9.96422 1.13727C9.85189 1.20803 9.75477 1.30045 9.67853 1.40913C9.60229 1.51782 9.54846 1.6406 9.52017 1.77031C9.49188 1.90002 9.4897 2.03406 9.51376 2.16462L10.5 8.07837C10.5 9.13924 10.0786 10.1567 9.32844 10.9068C8.57829 11.6569 7.56088 12.0784 6.50001 12.0784C5.43914 12.0784 4.42173 11.6569 3.67158 10.9068C2.92144 10.1567 2.50001 9.13924 2.50001 8.07837L3.48501 2.16462C3.50907 2.03406 3.50689 1.90002 3.4786 1.77031C3.45031 1.6406 3.39648 1.51782 3.32024 1.40913C3.244 1.30045 3.14688 1.20803 3.03455 1.13727C2.92222 1.06651 2.79692 1.01883 2.66597 0.997005C2.53501 0.975179 2.40103 0.979647 2.27182 1.01015C2.14261 1.04065 2.02077 1.09657 1.9134 1.17466C1.80603 1.25274 1.71529 1.35143 1.64646 1.46495C1.57763 1.57847 1.53209 1.70457 1.51251 1.83587L0.512509 7.83587C0.503953 7.89003 0.499773 7.94479 0.500009 7.99962C0.502008 9.41689 1.00491 10.7878 1.91984 11.8702C2.83478 12.9526 4.10286 13.6767 5.50001 13.9146V24.9996C5.50001 25.2648 5.60537 25.5192 5.7929 25.7067C5.98044 25.8943 6.23479 25.9996 6.50001 25.9996C6.76523 25.9996 7.01958 25.8943 7.20712 25.7067C7.39465 25.5192 7.50001 25.2648 7.50001 24.9996V13.9146C8.89716 13.6767 10.1652 12.9526 11.0802 11.8702C11.9951 10.7878 12.498 9.41689 12.5 7.99962C12.4998 7.94476 12.4952 7.89 12.4863 7.83587L11.4863 1.83587Z" fill="#343330" />
                     </svg>
                 </div>
-                <div className="border-r flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
+                <div className="md:border-r bg-[#F5F5F4] rounded-lg flex justify-between items-center p-5 flex-col gap-4 border-[#D9D9D9]">
                     <span className="text-sm font-bold md:text-lg">Обслужива</span>
                     <span className="text-sm font-bold md:text-lg">4.7</span>
                     <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.25 20H27.25C27.5152 20 27.7696 19.8946 27.9571 19.7071C28.1446 19.5196 28.25 19.2652 28.25 19C28.25 18.7348 28.1446 18.4804 27.9571 18.2929C27.7696 18.1054 27.5152 18 27.25 18H26.25V16C26.2464 12.9916 25.1143 10.0941 23.0776 7.88008C21.0408 5.66605 18.2476 4.29664 15.25 4.0425V2H17.25C17.5152 2 17.7696 1.89464 17.9571 1.70711C18.1446 1.51957 18.25 1.26522 18.25 1C18.25 0.734784 18.1446 0.48043 17.9571 0.292893C17.7696 0.105357 17.5152 0 17.25 0H11.25C10.9848 0 10.7304 0.105357 10.5429 0.292893C10.3554 0.48043 10.25 0.734784 10.25 1C10.25 1.26522 10.3554 1.51957 10.5429 1.70711C10.7304 1.89464 10.9848 2 11.25 2H13.25V4.0425C10.2524 4.29664 7.45919 5.66605 5.42245 7.88008C3.38571 10.0941 2.25364 12.9916 2.25 16V18H1.25C0.984784 18 0.73043 18.1054 0.542893 18.2929C0.355357 18.4804 0.25 18.7348 0.25 19C0.25 19.2652 0.355357 19.5196 0.542893 19.7071C0.73043 19.8946 0.984784 20 1.25 20ZM4.25 16C4.25 13.3478 5.30357 10.8043 7.17893 8.92893C9.0543 7.05357 11.5978 6 14.25 6C16.9022 6 19.4457 7.05357 21.3211 8.92893C23.1964 10.8043 24.25 13.3478 24.25 16V18H4.25V16ZM28.25 23C28.25 23.2652 28.1446 23.5196 27.9571 23.7071C27.7696 23.8946 27.5152 24 27.25 24H1.25C0.984784 24 0.73043 23.8946 0.542893 23.7071C0.355357 23.5196 0.25 23.2652 0.25 23C0.25 22.7348 0.355357 22.4804 0.542893 22.2929C0.73043 22.1054 0.984784 22 1.25 22H27.25C27.5152 22 27.7696 22.1054 27.9571 22.2929C28.1446 22.4804 28.25 22.7348 28.25 23Z" fill="#343330" />
                     </svg>
                 </div>
-                <div className="flex flex-col items-center justify-between gap-4 p-5 ">
+                <div className="flex flex-col bg-[#F5F5F4] rounded-lg items-center justify-between gap-4 p-5 ">
                     <span className="text-sm font-bold md:text-lg">Цена  и качество</span>
                     <span className="text-sm font-bold md:text-lg">4.7</span>
                     <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,9 +78,9 @@ const AboutSection = () => {
                     </svg>
                 </div>
             </section>
-            <section className="my-10 space-y-5">
+            <section className="my-5 space-y-5 sm:my-10">
                 <h1 className="text-[20px] font-bold">Где вы будете</h1>
-                <div className="h-[500px]">
+                <div className="h-[256px] sm:h-[500px]">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191885.5985627788!2d69.11455267277003!3d41.28247992248849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1726420713239!5m2!1sen!2s" width="100%" height="100%" style={{ border: 0 }} loading="lazy" ></iframe>
                 </div>
             </section>

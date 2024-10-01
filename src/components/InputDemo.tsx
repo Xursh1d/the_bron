@@ -18,8 +18,8 @@ export function InputDemo(props: InputDemoProps) {
         <div className="relative space-y-1">
             {label && <Label className="font-bold text-[16px]" htmlFor="">{label}</Label>}
             <Input type={type} placeholder={placeholder} className={cn(`${error && "border-[#C13515] focus:!ring-[#C13515]"} h-14 rounded-[10px] text-[16px]`, className)} />
-            <p className="text-sm text-[#C13515]">{error}</p>
-            {type == "password" && <Button variant={"ghost"} size="icon" className="absolute top-1 right-1"><EyeIcon color={error && "#C13515"} /></Button>}
+            <p className="text-[12px] sm:text-sm text-[#C13515]">{error}</p>
+            {type == "password" && <Button variant={"ghost"} size="icon" className="absolute bottom-2 right-1"><EyeIcon color={error && "#C13515"} /></Button>}
         </div>
     )
 }

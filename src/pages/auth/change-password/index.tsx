@@ -6,10 +6,10 @@ import { useAuth } from "../AuthProvider";
 export default function ChangePassword() {
     const { setShowModal } = useAuth()
     return (
-        <ModalContainer backCallBack={() => { }} title="" className="!max-w-[532px]" childClass="!pt-0 space-y-10">
+        <ModalContainer backCallBack={() => { }} title="" className="!max-w-[532px] h-full sm:h-auto" childClass="!pt-0 space-y-10">
             <div className="space-y-3">
-                <h1 className="text-[#0A0A0A] text-[28px] font-semibold">Восстановить пароль</h1>
-                <p className="text-lg text-[#0A0A0A]">Для восстановления пароля, установленного для счета, открытого на номер <span className="font-bold">+998(90) 115 92 34</span></p>
+                <h1 className="text-[#0A0A0A] text-xl sm:text-[28px] font-semibold">Восстановить пароль</h1>
+                <p className="text-sm sm:text-lg text-[#0A0A0A]">Для восстановления пароля, установленного для счета, открытого на номер <span className="font-bold">+998(90) 115 92 34</span></p>
             </div>
             <div className="space-y-3">
                 <InputDemo type={"password"} placeholder="Пароль" label="Пароль" />

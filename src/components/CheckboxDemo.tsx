@@ -11,10 +11,10 @@ export function CheckboxDemo(props: CheckboxProps) {
 
     return (
         <div className="flex items-center space-x-2">
-            <Checkbox className={cn("size-6 rounded", className)} id="terms" />
+            <Checkbox className={cn("size-5 sm:size-6 rounded", className)} id="terms" />
             <label
                 htmlFor="terms"
-                className="text-[16px] font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm sm:text-[16px] font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
                 {label}
             </label>
