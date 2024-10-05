@@ -6,7 +6,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
 
 export const ReservationForm = () => (
-    <div className="w-full order-1 md:order-2 md:w-[36.35%] py-6 px-5 rounded-3xl min-h-[360px] border border-[#C2C2C2] space-y-3">
+    <div className="w-full order-1 lg:order-2 lg:w-[36.35%] py-6 px-5 rounded-3xl min-h-[360px] border border-[#C2C2C2] space-y-3">
         <SelectDemo title="Филиал" />
         <SelectDemo title="Guest number" />
         <SelectDemo title="Place" />

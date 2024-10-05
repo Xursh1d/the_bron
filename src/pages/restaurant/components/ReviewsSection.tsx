@@ -46,7 +46,7 @@ const ReviewsSection = () => {
                 </div>)}
             </div>
             <div className="flex justify-center w-full">
-                <Button variant={"outline"} className=" border-[#000000] w-full sm:w-auto !text-[16px] !text-[#000000]">Показать все отзывы(23)</Button>
+                <Button variant={"outline"} className=" border-[#000000] h-12 w-full sm:w-auto !text-[16px] !text-[#000000]">Показать все отзывы(23)</Button>
             </div>
         </section>
     );
