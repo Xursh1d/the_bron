@@ -23,6 +23,7 @@ const ReviewsSection = () => {
                             <h6 className="text-lg font-bold">Sven</h6>
                             <h6 className="text-lg font-bold">Германия</h6>
                         </div>
+
                     </div>
                     <div className="flex flex-col gap-4 sm:items-center sm:flex-row">
                         <div className="flex items-center gap-[2px]"><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /><StarIcon className="!size-5 text-[#F7B406]" /></div>
