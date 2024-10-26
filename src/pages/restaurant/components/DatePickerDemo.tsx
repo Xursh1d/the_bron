@@ -3,7 +3,10 @@ import { cn } from "@/lib/utils";
 import * as React from "react";
 import { Label } from "../../../components/ui/label";
 
-export function DatePickerDemo() {
+interface DatePickerDemoProps {
+    setIsFocused: React.Dispatch<React.SetStateAction<'date' | 'time' | null>>;
+}
+export function DatePickerDemo({ setIsFocused }: DatePickerDemoProps) {
     const [date, setdate] = React.useState<string>();
 
     return (
@@ -25,6 +28,7 @@ export function DatePickerDemo() {
                     "peer w-full  justify-start text-left h-[56px] rounded-[10px] !text-[16px] font-normal pt-7",
                     !date && "text-muted-foreground"
                 )}
+                onFocus={() => setIsFocused("date")}
                 placeholder={"Дата"}
                 onChange={(e) => setdate(e.target.value)}
             />

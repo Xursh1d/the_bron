@@ -5,6 +5,7 @@ import SuccessCancel from "./pages/my-reservation/modals/SuccessModal";
 import LeaveFeedback from "./pages/my-reservation/modals/LeaveFeedback";
 import PageLayout from "./pages/PageLayout";
 import ProtectedRoute from "./ProtectedRoute";
+import MobileBooking from "./pages/restaurant/mobile-booking";
 
 const ConfirmPayPage = lazy(() => import("./pages/confirm-pay"));
 const HomePage = lazy(() => import("./pages/home"));
@@ -36,6 +37,12 @@ export const routes: RouteObject[] = [
       {
         path: "/restaurant/:id",
         element: SuspenseLoader(RestaurantPage),
+        children: [
+          {
+            path: "booking",
+            element: <MobileBooking />
+          }
+        ]
       },
       {
         path: "/confirm-pay",

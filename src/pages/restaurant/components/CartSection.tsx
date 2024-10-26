@@ -8,7 +8,7 @@ export default function CartSection() {
         <section className="space-y-3 md:space-y-10">
             <div className="pb-3 md:pb-0 md:h-[85px] flex justify-between items-start border-b border-[#CCCCCC]">
                 <h1 className="font-bold text-2xl sm:text-3xl md:text-[48px]">Cart</h1>
-                <Button onClick={() => navigate("/confirm-pay")} className="hidden !h-[65px] px-10 !text-[32px]">125 000 UZS</Button>
+                <Button onClick={() => navigate("/confirm-pay")} className="hidden sm:block !h-[65px] px-10 !text-[32px]">125 000 UZS</Button>
                 <h1 className="text-xl font-bold sm:text-2xl md:hidden text-primary">125 000 UZS</h1>
             </div>
             <div>

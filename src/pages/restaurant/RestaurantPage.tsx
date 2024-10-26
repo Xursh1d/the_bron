@@ -1,7 +1,7 @@
 import StarIcon from "@/components/icons/StarIcon";
 import TitleBar from "@/components/TitleBar";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { ImageGallery } from "./components/ImageGallery";
 import { ReservationForm } from "./components/ReservationForm";
 import RestaurantDetails from "./components/RestaurantDetail";
@@ -9,6 +9,8 @@ import TabsSection from "./components/Tabs";
 
 
 export default function RestaurantPage() {
+    const navigate = useNavigate()
+
     return (
         <section className="space-y-5 sm:space-y-10">
             <TitleBar title="Name Restarount" subComponent={<SubComponent />} />
@@ -19,7 +21,12 @@ export default function RestaurantPage() {
                 <ReservationForm />
             </div>
             <TabsSection />
-            <Button className="w-full sm:hidden text-[16px] h-12">Забронировать</Button>
+            <Button
+                onClick={() => navigate('booking')}
+                className="w-full sm:hidden text-[16px] h-12">
+                Забронировать
+            </Button>
+            <Outlet />
         </section>
     );
 }
